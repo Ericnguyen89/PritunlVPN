@@ -29,3 +29,4 @@ if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
     ping -c 4 "10.3.4.1" | head -n 4 
 else
     echo "Kết thúc chương trình."
+fi
