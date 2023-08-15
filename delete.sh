@@ -1,3 +1,4 @@
+sudo apt install jq -y
 pritunl-client list -j > tmp1.json
 id_delete=$(jq -r '.[0].id' tmp1.json)
 
@@ -18,7 +19,7 @@ if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
   # Start profile VPN
     pritunl-client remove $ba_ky_tu_del 
     echo "ĐÃ DELETED PROFILE ID: $first_id1"
-    
+    wget https://raw.githubusercontent.com/Ericnguyen89/PriturnVPN/main/vpn-up2.sh && sudo bash vpn-up2.sh
 else
     echo "Kết thúc chương trình."
 fi
