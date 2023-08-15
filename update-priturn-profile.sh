@@ -2,7 +2,8 @@ sudo apt install jq -y
 echo " ĐÃ CÀI ĐẶT XONG CÁC SERVICES CẦN THIẾT..."
 echo " ----VPN Old Profile " 
 sudo pritunl-client list > del.json
-id_del=$(jq -r '.[0].id' del.json)
+id_del1=$(jq -r '.[0].id' del.json)
+id_del=$(echo "$id_del1" | cut -d' ' -f1-3)
 echo "ID of OLD VPN profile is: $id_del"
 sudo pritunl-client disable $id_del
 sudo pritunl-client remove $id_del
