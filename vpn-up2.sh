@@ -1,3 +1,4 @@
+sudo apt install jq -y
 echo " ĐÃ CÀI ĐẶT XONG CÁC SERVICES CẦN THIẾT..."
 echo "Nhập vào profile VPN dưới dạng links:"
 read vpn_string
