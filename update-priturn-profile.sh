@@ -3,16 +3,17 @@ echo " ĐÃ CÀI ĐẶT XONG CÁC SERVICES CẦN THIẾT..."
 echo " ----VPN Old Profile " 
 sudo pritunl-client list > del.json
 id_del=$(jq -r '.[0].id' del.json)
-pritunl-client disable $id_del
-pritunl-client remove $id_del
+sudo pritunl-client disable $id_del
+sudo pritunl-client remove $id_del
+sudo pritunl-client list
 echo " DELETED OLD PROFILE VPN ...."
 echo "Nhập vào new profiles VPN dưới dạng links:"
 read vpn_string
 # Thực hiện lệnh thêm profile VPN
-pritunl-client add $vpn_string
+sudo pritunl-client add $vpn_string
 
 # Read the JSON data from the file and extract the "id" field
-pritunl-client list -j > tmp.json
+sudo pritunl-client list -j > tmp.json
 id_field=$(jq -r '.[0].id' tmp.json)
 
 # Extract the first three words from the "id" field
