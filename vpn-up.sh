@@ -1,7 +1,8 @@
 sudo apt install jq -y
 echo " ĐÃ CÀI ĐẶT XONG CÁC SERVICES CẦN THIẾT..."
-echo "Nhập vào profile VPN dưới dạng links:"
-read vpn_string
+#echo "Nhập vào profile VPN dưới dạng links:"
+#read vpn_string
+vpn_string=pritunl://123.30.187.135/ku/nMKxcuCK
 # Thực hiện lệnh thêm profile VPN
 pritunl-client add $vpn_string
 
