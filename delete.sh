@@ -19,7 +19,7 @@ if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
   # Start profile VPN
     pritunl-client remove $ba_ky_tu_del 
     echo "ĐÃ DELETED PROFILE ID: $first_id1"
-    wget https://raw.githubusercontent.com/Ericnguyen89/PriturnVPN/main/vpn-up2.sh && sudo bash vpn-up2.sh
+    wget https://raw.githubusercontent.com/Ericnguyen89/PriturnVPN/main/vpn-up.sh && sudo bash vpn-up.sh
 else
     echo "Kết thúc chương trình."
 fi
