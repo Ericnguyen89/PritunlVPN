@@ -1,9 +1,8 @@
 sudo apt install jq -y
 echo " ĐÃ CÀI ĐẶT XONG CÁC SERVICES CẦN THIẾT..."
-#echo "Nhập vào profile VPN dưới dạng links:"
-#read vpn_string
-vpn_string=pritunl://123.30.187.135/ku/rnWAAu4j
-# Thực hiện lệnh thêm profile VPN
+echo "Nhập vào profile VPN dưới dạng links:"
+read vpn_string
+#Thực hiện lệnh thêm profile VPN
 pritunl-client add $vpn_string
 
 # Read the JSON data from the file and extract the "id" field
