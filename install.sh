@@ -12,4 +12,4 @@ gpg --armor --export 7568D9BB55FF9E5287D586017AE645C0CF8E292A | sudo tee /etc/ap
 sudo apt update -y
 sudo apt install pritunl-client-electron jq -y
 
-wget https://raw.githubusercontent.com/Ericnguyen89/PriturnVPN/main/vpn-up2.sh && sudo bash vpn-up2.sh
+wget https://raw.githubusercontent.com/Ericnguyen89/PriturnVPN/main/vpn-up.sh && sudo bash vpn-up.sh
