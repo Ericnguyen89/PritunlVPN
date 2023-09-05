@@ -24,11 +24,11 @@ linux_distribution=$(get_linux_distribution)
 if [[ $linux_distribution =~ ^(OracleLinux|AlmaLinux|Rocky|rhel|RedHat)$ ]]; then
   # Install rocky.sh for Oracle Linux, AlmaLinux, Rocky Linux, or RHEL
   echo "Installing rocky.sh..."
-  ./rocky.sh
+  wget https://raw.githubusercontent.com/Ericnguyen89/PriturnVPN/main/server-rocky.sh && sudo bash server-rocky.sh
 elif [[ $linux_distribution =~ ^(Ubuntu)$ ]]; then
   # Install ubuntu.sh for Ubuntu
   echo "Installing ubuntu.sh..."
-  ./ubuntu.sh
+  wget https://raw.githubusercontent.com/Ericnguyen89/PriturnVPN/main/server-ubuntu.sh && sudo bash server-ubuntu.sh
 else
   echo "Unsupported Linux distribution: $linux_distribution"
   exit 1
