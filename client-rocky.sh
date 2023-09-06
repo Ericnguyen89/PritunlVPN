@@ -13,7 +13,7 @@ sudo yum -y install epel-release
 sudo yum -y update
 sudo yum -y install pritunl-client-electron
 sudo yum -y install jq
-
+sudo yum -y install wireguard-tools
 echo " ĐÃ CÀI ĐẶT XONG CÁC SERVICES CẦN THIẾT..."
 echo "Nhập vào profile VPN dưới dạng links:"
 read vpn_string
