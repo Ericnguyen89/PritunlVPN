@@ -1,4 +1,4 @@
-sudo apt install jq -y
+#sudo apt install jq -y
 pritunl-client list -j > tmp1.json
 id_delete=$(jq -r '.[0].id' tmp1.json)
 
