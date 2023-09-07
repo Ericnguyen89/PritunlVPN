@@ -14,6 +14,14 @@ sudo yum -y update
 sudo yum -y install pritunl-client-electron
 sudo yum -y install jq
 sudo yum -y install wireguard-tools
+#Fix lỗi tự disconnect wireguard interface khi start profile pritunl
+sudo systemctl start systemd-resolved
+sudo systemctl enable systemd-resolved
+sudo sed -i '/\[main\]/a dns=systemd-resolved' /etc/NetworkManager/NetworkManager.conf
+sudo rm -f /etc/resolv.conf
+sudo ln -s /usr/lib/systemd/resolv.conf /etc/resolv.conf
+sudo systemctl restart NetworkManager
+# ---------------------------
 echo " ĐÃ CÀI ĐẶT XONG CÁC SERVICES CẦN THIẾT..."
 echo "Nhập vào profile VPN dưới dạng links:"
 read vpn_string
