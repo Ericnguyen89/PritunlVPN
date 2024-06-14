@@ -43,7 +43,7 @@ ba_ky_tu=${first_id:0:3}
 
 pritunl-client enable $ba_ky_tu
 
-read -p "Nhấn Y và Enter để tiếp tục: " choice
+read -p "Nhấn Y và Enter để bật VPN profile: $first_id >" choice
 # Kiểm tra xem người dùng đã nhấn "Y" hay chưa
 if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
   # Start profile VPN
