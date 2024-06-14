@@ -29,15 +29,15 @@ first_id=$(echo "$id_field" | cut -d' ' -f1-3)
 pritunl-client list
 echo "ID of VPN profile is: $first_id"
 
-ba_ky_tu=${first_id:0:3}
+#ba_ky_tu=${first_id:0:3}
 
-pritunl-client enable $ba_ky_tu
+pritunl-client enable $first_id #$ba_ky_tu
 
-read -p "Nhấn Y và Enter để tiếp tục: " choice
+read -p "Nhấn Y và Enter để start VPN Profiles: $first_id " choice
 # Kiểm tra xem người dùng đã nhấn "Y" hay chưa
 if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
   # Start profile VPN
-    pritunl-client start $ba_ky_tu -m wg
+    pritunl-client start $first_id -m wg
     echo "ĐÃ KÍCH HOẠT VPN PROFILE ID: $first_id"
    
 else
